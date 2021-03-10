@@ -1,0 +1,22 @@
+ <h1>User Details</h1>
+ <table class="table table-bordered">
+        <thead>
+          <tr class="info">
+            <th>Name</th>
+            <th>Age</th>           
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of userList?.users">  
+            <td>{{user.Name}}</td>
+            <td>{{user.Age}}</td>            
+          </tr>        
+        </tbody>
+</table>
+<h4>Toggle Containing using ngIf</h4>
+<ng-container *ngIf="toggle;else toggleElse">
+<p>display if condition</p>
+</ng-container>
+<ng-template #toggleElse>
+display else condition
+</ng-template>
